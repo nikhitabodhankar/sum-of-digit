@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sum_of_digit
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Console.WriteLine("Enter 2 numbers");
+            //int num1 = Convert.ToInt32(Console.ReadLine());
+            //int num2 = Convert.ToInt32(Console.ReadLine());
+
+            //Basic calculations(num1 , num2);
+            Console.WriteLine("Enter any 4 digit numbers");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("sum of digit  " + sumofdigit(num1));
+            Console.Read();
+        }
+        static void basiccalculation(int x,int y)
+        {
+            Console.WriteLine("sum" + (x + y));
+        }
+        static int sumofdigit(int num)
+        {
+            int sum = 0;
+            while(num>0)
+            {
+                sum += num % 10;
+                num = num / 10;
+            }
+            return sum;
+        }
+
+    }
+}
